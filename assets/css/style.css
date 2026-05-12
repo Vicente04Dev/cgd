@@ -429,6 +429,24 @@ section { padding: 110px 5%; }
 }
 @media (max-width: 480px) { .process-steps { grid-template-columns: 1fr; gap: 32px; } }
 
+/* Variante clara — fundo cinzento, textos escuros */
+.process-light { background: var(--gray-light) !important; color: var(--black) !important; }
+.process-light .section-label { color: var(--orange); }
+.process-light .section-title { color: var(--black); }
+.process-light .section-sub { color: #666 !important; }
+.process-light .process-steps::before {
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,.12) 20%, rgba(0,0,0,.12) 80%, transparent) !important;
+}
+.process-light .step-num {
+  border-color: rgba(0,0,0,.14) !important;
+  color: var(--orange) !important;
+  background: var(--white) !important;
+  box-shadow: var(--shadow-sm);
+}
+.process-light .step:hover .step-num { background: var(--orange) !important; border-color: var(--orange) !important; color: var(--white) !important; }
+.process-light .step-name { color: var(--black) !important; }
+.process-light .step-desc { color: #666 !important; }
+
 /* ===== CLIENTES ===== */
 #clients-section { background: var(--white); text-align: center; }
 .clients-logos { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; align-items: center; margin-top: 56px; }
