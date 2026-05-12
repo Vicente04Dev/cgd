@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfólio CGD LDA — Veja os nossos melhores trabalhos de design gráfico, branding, brindes, fardamentos e sinalética em Angola.">
+<title>Portfólio — CGD LDA</title>
+
+<link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+<link rel="apple-touch-icon" href="assets/images/favicon.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300&family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ===== LOADER ===== -->
+<div id="loader">
+  <div class="loader-logo">
+    <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="72" height="72" rx="4" fill="#1B3A3A"/>
+      <polygon points="0,72 72,0 72,72" fill="#E85C1B"/>
+      <polygon points="18,54 54,18 18,18" fill="#1B3A3A"/>
+      <text x="84" y="56" font-family="Arial Black,sans-serif" font-size="42" font-weight="900" fill="#E85C1B">CGD</text>
+      <text x="154" y="68" font-family="Arial,sans-serif" font-size="14" fill="#888">LDA</text>
+    </svg>
+  </div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- ===== CURSOR ===== -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===== NAVEGAÇÃO ===== -->
+<nav id="mainNav">
+  <a class="nav-logo" href="index.html">
+    <svg viewBox="0 0 200 70" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="60" height="60" rx="3" fill="#1B3A3A"/>
+      <polygon points="0,60 60,0 60,60" fill="#E85C1B"/>
+      <polygon points="14,46 46,14 14,14" fill="#1B3A3A"/>
+      <text x="68" y="44" font-family="Arial Black,sans-serif" font-size="36" font-weight="900" fill="#E85C1B">CGD</text>
+      <text x="126" y="54" font-family="Arial,sans-serif" font-size="11" fill="#555">LDA</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="sobre.html">Sobre Nós</a></li>
+    <li><a href="portfolio.html" class="active">Portfólio</a></li>
+    <li><a href="servicos.html">Serviços</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <a class="nav-cta" href="contacto.html">Pedir Orçamento</a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ===== MENU MOBILE ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Início</a>
+  <a href="sobre.html">Sobre Nós</a>
+  <a href="portfolio.html">Portfólio</a>
+  <a href="servicos.html">Serviços</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="contacto.html" class="mob-cta">Pedir Orçamento</a>
+</div>
+
+
+<!-- ====================================================== -->
+<!--                   PORTFÓLIO PAGE                      -->
+<!-- ====================================================== -->
+<div class="portfolio-hero">
+  <div class="section-label">Nossos Trabalhos</div>
+  <h1 class="section-title" style="color:white;">Portfólio <span>CGD</span></h1>
+  <p class="section-sub" style="color:rgba(255,255,255,.6);">Uma seleção dos nossos melhores projetos entregues a clientes em Angola.</p>
+</div>
+<div class="portfolio-main">
+  <div class="portfolio-filter stagger">
+    <button class="filter-btn active" onclick="filterPortfolio('all',this)">Todos</button>
+    <button class="filter-btn" onclick="filterPortfolio('branding',this)">Branding</button>
+    <button class="filter-btn" onclick="filterPortfolio('brindes',this)">Brindes</button>
+    <button class="filter-btn" onclick="filterPortfolio('fardamentos',this)">Fardamentos</button>
+    <button class="filter-btn" onclick="filterPortfolio('sinaletica',this)">Sinalética</button>
+    <button class="filter-btn" onclick="filterPortfolio('design',this)">Design</button>
+  </div>
+  <div class="portfolio-grid" id="portfolioGrid">
+    <div class="portfolio-item" data-cat="design" onclick="openLightbox('assets/images/cgd-escritorio-imac.jpg')">
+      <img src="assets/images/cgd-escritorio-imac.jpg" alt="Estúdio CGD">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Design</div><div class="portfolio-name">Estúdio Criativo CGD</div></div></div>
+    </div>
+    <div class="portfolio-item span2" data-cat="fardamentos" onclick="openLightbox('assets/images/portfolio-fardamento-kilamba.jpg')">
+      <img src="assets/images/portfolio-fardamento-kilamba.jpg" alt="Fardamento">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Fardamentos</div><div class="portfolio-name">Admin. Municipal Kilamba Kiaxi</div></div></div>
+    </div>
+    <div class="portfolio-item" data-cat="brindes" onclick="openLightbox('assets/images/portfolio-canetas-soyo.jpg')">
+      <img src="assets/images/portfolio-canetas-soyo.jpg" alt="Canetas">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Brindes</div><div class="portfolio-name">Canetas Empresa Portuária do Soyo</div></div></div>
+    </div>
+    <div class="portfolio-item" data-cat="design" onclick="openLightbox('assets/images/portfolio-design-cgd.jpg')">
+      <img src="assets/images/portfolio-design-cgd.jpg" alt="Design">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Design</div><div class="portfolio-name">Design Criativo CGD</div></div></div>
+    </div>
+    <div class="portfolio-item" data-cat="brindes" onclick="openLightbox('assets/images/portfolio-bones-business-sunset.jpg')">
+      <img src="assets/images/portfolio-bones-business-sunset.jpg" alt="Bonés">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Brindes</div><div class="portfolio-name">Bonés Business Sunset</div></div></div>
+    </div>
+    <div class="portfolio-item" data-cat="brindes" onclick="openLightbox('assets/images/cgd-designer-trabalho.jpg')">
+      <img src="assets/images/cgd-designer-trabalho.jpg" alt="Designer">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Brindes</div><div class="portfolio-name">Garrafas Personalizadas</div></div></div>
+    </div>
+    <div class="portfolio-item span2" data-cat="sinaletica" onclick="openLightbox('assets/images/portfolio-outdoor-prodel.jpg')">
+      <img src="assets/images/portfolio-outdoor-prodel.jpg" alt="Outdoor">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Sinalética</div><div class="portfolio-name">Outdoor Prodel — Laúca 2070MW</div></div></div>
+    </div>
+    <div class="portfolio-item" data-cat="branding" onclick="openLightbox('assets/images/portfolio-branding-avova.jpg')">
+      <img src="assets/images/portfolio-branding-avova.jpg" alt="Branding Avova">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Branding</div><div class="portfolio-name">Kit Corporativo AVOVA</div></div></div>
+    </div>
+    <div class="portfolio-item" data-cat="branding" onclick="openLightbox('assets/images/portfolio-branding-cgd-comercial.jpg')">
+      <img src="assets/images/portfolio-branding-cgd-comercial.jpg" alt="Branding CGD">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Branding</div><div class="portfolio-name">Identidade CGD Comercial</div></div></div>
+    </div>
+  </div>
+</div>
+<div class="cta-band reveal">
+  <div class="cta-band-title">Quer um Projecto<br>Como Este?</div>
+  <a href="contacto.html" class="btn-white">Falar com a Equipa</a>
+</div>
+
+
+<!-- ====================================================== -->
+<!--                       FOOTER                          -->
+<!-- ====================================================== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <svg viewBox="0 0 200 65" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="58" height="58" rx="3" fill="#1B3A3A"/>
+        <polygon points="0,58 58,0 58,58" fill="#E85C1B"/>
+        <polygon points="12,44 44,12 12,12" fill="#1B3A3A"/>
+        <text x="68" y="44" font-family="Arial Black,sans-serif" font-size="32" font-weight="900" fill="#E85C1B">CGD</text>
+        <text x="120" y="54" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,.4)">LDA</text>
+      </svg>
+      <p class="footer-tagline">Criatividade que Imprime Resultados. Especialistas em design gráfico, impressão e branding em Angola.</p>
+      <div class="footer-socials">
+        <a class="footer-social" href="https://facebook.com" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a class="footer-social" href="https://instagram.com" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a class="footer-social" href="https://linkedin.com" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Navegação</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Serviços</div>
+      <ul class="footer-links">
+        <li><a href="servicos.html">Design Gráfico</a></li>
+        <li><a href="servicos.html">Impressão Digital</a></li>
+        <li><a href="servicos.html">Branding Corporativo</a></li>
+        <li><a href="servicos.html">Brindes Personalizados</a></li>
+        <li><a href="servicos.html">Fardamentos</a></li>
+        <li><a href="servicos.html">Sinalética</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Receba Novidades</div>
+      <p style="font-size:.85rem;color:rgba(255,255,255,.45);margin-bottom:16px;line-height:1.6;">Subscreva para receber promoções e novidades CGD.</p>
+      <div class="footer-newsletter">
+        <input type="email" placeholder="O seu email">
+        <button class="btn-primary" style="width:100%;padding:12px;" onclick="showToast('Subscrito com sucesso! ✓')">Subscrever</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 <span>CGD LDA</span>. Todos os direitos reservados. Feito em <span>Angola</span> 🇦🇴</p>
+    <p class="footer-copy">Luanda, Angola</p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✓</span>
+  <span id="toastMsg">Mensagem enviada!</span>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a class="wa-float" href="https://wa.me/244900000000" target="_blank" title="WhatsApp CGD">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

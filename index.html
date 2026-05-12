@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CGD LDA — Gráfica e Design em Angola. Especialistas em design gráfico, impressão digital, branding corporativo, brindes e fardamentos.">
+<title>CGD LDA — Gráfica &amp; Design em Angola</title>
+
+<link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+<link rel="apple-touch-icon" href="assets/images/favicon.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300&family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ===== LOADER ===== -->
+<div id="loader">
+  <div class="loader-logo">
+    <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="72" height="72" rx="4" fill="#1B3A3A"/>
+      <polygon points="0,72 72,0 72,72" fill="#E85C1B"/>
+      <polygon points="18,54 54,18 18,18" fill="#1B3A3A"/>
+      <text x="84" y="56" font-family="Arial Black,sans-serif" font-size="42" font-weight="900" fill="#E85C1B">CGD</text>
+      <text x="154" y="68" font-family="Arial,sans-serif" font-size="14" fill="#888">LDA</text>
+    </svg>
+  </div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- ===== CURSOR ===== -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===== NAVEGAÇÃO ===== -->
+<nav id="mainNav">
+  <a class="nav-logo" href="index.html">
+    <svg viewBox="0 0 200 70" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="60" height="60" rx="3" fill="#1B3A3A"/>
+      <polygon points="0,60 60,0 60,60" fill="#E85C1B"/>
+      <polygon points="14,46 46,14 14,14" fill="#1B3A3A"/>
+      <text x="68" y="44" font-family="Arial Black,sans-serif" font-size="36" font-weight="900" fill="#E85C1B">CGD</text>
+      <text x="126" y="54" font-family="Arial,sans-serif" font-size="11" fill="#555">LDA</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Início</a></li>
+    <li><a href="sobre.html">Sobre Nós</a></li>
+    <li><a href="portfolio.html">Portfólio</a></li>
+    <li><a href="servicos.html">Serviços</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <a class="nav-cta" href="contacto.html">Pedir Orçamento</a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ===== MENU MOBILE ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Início</a>
+  <a href="sobre.html">Sobre Nós</a>
+  <a href="portfolio.html">Portfólio</a>
+  <a href="servicos.html">Serviços</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="contacto.html" class="mob-cta">Pedir Orçamento</a>
+</div>
+
+
+<!-- ====================================================== -->
+<!--                      HOME PAGE                        -->
+<!-- ====================================================== -->
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Gráfica &amp; Design em Angola</div>
+    <h1 class="hero-title">Damos <span>Forma</span> à Sua Marca</h1>
+    <p class="hero-desc">Soluções completas de design gráfico, impressão e branding para empresas que querem se destacar no mercado angolano.</p>
+    <div class="hero-btns">
+      <a href="portfolio.html" class="btn-primary">Ver Portfólio</a>
+      <a href="contacto.html" class="btn-outline">Fale Connosco</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Clientes</div></div>
+      <div class="stat-item"><div class="stat-num">8+</div><div class="stat-label">Anos Experiência</div></div>
+      <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Satisfação</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual">
+      <div class="hero-img-main">
+        <img src="assets/images/portfolio-branding-avova.jpg" alt="Kit Corporativo AVOVA" loading="lazy">
+        <div class="hero-img-badge">
+          <em>Branding</em>
+          <span>Kit Corporativo AVOVA</span>
+        </div>
+      </div>
+      <div class="hero-img-secondary">
+        <img src="assets/images/portfolio-fardamento-kilamba.jpg" alt="Fardamentos" loading="lazy">
+      </div>
+      <div class="hero-img-stat">
+        <div class="hero-img-stat-num">1000+</div>
+        <div class="hero-img-stat-label">Projectos Concluídos</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-badge">Criatividade que Imprime Resultados</div>
+  <div class="hero-scroll" onclick="document.getElementById('marquee-section').scrollIntoView({behavior:'smooth'})">
+    <div class="hero-scroll-line"></div>
+    <span>Rolar</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" id="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">Design Gráfico</span>
+    <span class="marquee-item">Impressão Digital</span>
+    <span class="marquee-item">Branding Corporativo</span>
+    <span class="marquee-item">Brindes Personalizados</span>
+    <span class="marquee-item">Sinalética</span>
+    <span class="marquee-item">Fardamentos</span>
+    <span class="marquee-item">Criação de Logótipos</span>
+    <span class="marquee-item">Design Gráfico</span>
+    <span class="marquee-item">Impressão Digital</span>
+    <span class="marquee-item">Branding Corporativo</span>
+    <span class="marquee-item">Brindes Personalizados</span>
+    <span class="marquee-item">Sinalética</span>
+    <span class="marquee-item">Fardamentos</span>
+    <span class="marquee-item">Criação de Logótipos</span>
+  </div>
+</div>
+
+<!-- SERVIÇOS -->
+<section id="services-section">
+  <div class="services-header reveal">
+    <div>
+      <div class="section-label">O Que Fazemos</div>
+      <h2 class="section-title">Nossos <span>Serviços</span></h2>
+    </div>
+    <p class="section-sub">Do conceito ao produto final, soluções criativas para a sua empresa.</p>
+  </div>
+  <div class="services-grid stagger">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+      <div class="service-name">Design Gráfico</div>
+      <p class="service-desc">Identidades visuais, logótipos, papelaria corporativa e todos os materiais gráficos para a sua empresa.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+      <div class="service-name">Impressão Digital</div>
+      <p class="service-desc">Impressão de alta qualidade: folhetos, banners, cartazes, outdoors e muito mais.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+      <div class="service-name">Branding &amp; Identidade</div>
+      <p class="service-desc">Construção completa da identidade visual da sua marca, do conceito ao manual de normas.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+      <div class="service-name">Brindes Corporativos</div>
+      <p class="service-desc">Personalização de canetas, garrafas, cadernos, bonés, t-shirts e qualquer brinde com a sua marca.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">05</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+      <div class="service-name">Fardamentos</div>
+      <p class="service-desc">Uniformes e fardamentos profissionais com o logótipo e identidade visual da sua empresa.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">06</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <div class="service-name">Sinalética &amp; Outdoors</div>
+      <p class="service-desc">Painéis, sinalética exterior e interior, outdoors e comunicação visual para espaços.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO PREVIEW -->
+<section style="background:var(--white);">
+  <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:48px;">
+    <div><div class="section-label">Trabalhos Recentes</div><h2 class="section-title">Nosso <span>Portfólio</span></h2></div>
+    <a href="portfolio.html" class="btn-primary">Ver Todos</a>
+  </div>
+  <div class="portfolio-grid">
+    <div class="portfolio-item span2 reveal" onclick="openLightbox('assets/images/portfolio-fardamento-kilamba.jpg')">
+      <img src="assets/images/portfolio-fardamento-kilamba.jpg" alt="Fardamentos Administração Municipal do Kilamba Kiaxi">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Fardamentos</div><div class="portfolio-name">Admin. Municipal do Kilamba Kiaxi</div></div></div>
+    </div>
+    <div class="portfolio-item span-row reveal" onclick="openLightbox('assets/images/cgd-escritorio-imac.jpg')">
+      <img src="assets/images/cgd-escritorio-imac.jpg" alt="Estúdio CGD">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Ambiente</div><div class="portfolio-name">Estúdio CGD Comercial</div></div></div>
+    </div>
+    <div class="portfolio-item reveal" onclick="openLightbox('assets/images/portfolio-bones-business-sunset.jpg')">
+      <img src="assets/images/portfolio-bones-business-sunset.jpg" alt="Bonés Business Sunset">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Brindes</div><div class="portfolio-name">Bonés Business Sunset</div></div></div>
+    </div>
+    <div class="portfolio-item reveal" onclick="openLightbox('assets/images/portfolio-canetas-soyo.jpg')">
+      <img src="assets/images/portfolio-canetas-soyo.jpg" alt="Canetas Empresa Portuária do Soyo">
+      <div class="portfolio-overlay"><div class="portfolio-info"><div class="portfolio-tag">Brindes</div><div class="portfolio-name">Canetas Empresa Portuária do Soyo</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MINI -->
+<section style="background:var(--gray-light);">
+  <div class="about-grid">
+    <div class="about-images reveal-left">
+      <img class="about-img-main" src="assets/images/cgd-equipa-direcao.jpg" alt="Equipa CGD">
+      <img class="about-img-secondary" src="assets/images/cgd-recepcao.png" alt="CGD Recepção">
+      <div class="about-accent"></div>
+    </div>
+    <div class="about-content reveal-right">
+      <div class="section-label">Quem Somos</div>
+      <h2 class="section-title">Criatividade que <span>Imprime</span> Resultados</h2>
+      <p class="about-text">A CGD LDA é uma empresa angolana especializada em design gráfico, impressão digital e branding corporativo. Transformamos ideias em realidade visual para empresas de todos os sectores.</p>
+      <ul class="about-features">
+        <li><span>Equipa criativa e profissional com anos de experiência</span></li>
+        <li><span>Tecnologia de impressão de última geração</span></li>
+        <li><span>Atendimento personalizado para cada cliente</span></li>
+        <li><span>Entrega no prazo com qualidade garantida</span></li>
+      </ul>
+      <a href="sobre.html" class="btn-primary">Conhecer Mais</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section id="process-section">
+  <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
+    <div class="section-label" style="justify-content:center;">Como Trabalhamos</div>
+    <h2 class="section-title">Nosso <span>Processo</span></h2>
+    <p class="section-sub" style="margin:0 auto;">Um processo simples e eficiente para transformar a sua ideia num produto final impecável.</p>
+  </div>
+  <div class="process-steps stagger">
+    <div class="step"><div class="step-num">01</div><div class="step-name">Briefing</div><p class="step-desc">Ouvimos as suas necessidades e objetivos para entender completamente o que pretende.</p></div>
+    <div class="step"><div class="step-num">02</div><div class="step-name">Conceito</div><p class="step-desc">A nossa equipa criativa desenvolve propostas alinhadas com a sua identidade.</p></div>
+    <div class="step"><div class="step-num">03</div><div class="step-name">Aprovação</div><p class="step-desc">Apresentamos o trabalho para a sua aprovação, com revisões incluídas.</p></div>
+    <div class="step"><div class="step-num">04</div><div class="step-name">Entrega</div><p class="step-desc">Produzimos e entregamos o produto final com a qualidade CGD garantida.</p></div>
+  </div>
+</section>
+
+<!-- CLIENTES -->
+<section id="clients-section">
+  <div class="reveal" style="text-align:center;">
+    <div class="section-label" style="justify-content:center;">Quem Confia em Nós</div>
+    <h2 class="section-title">Nossos <span>Clientes</span></h2>
+  </div>
+  <div class="clients-logos stagger">
+    <div class="client-logo">EMPRESA PORTUÁRIA DO SOYO</div>
+    <div class="client-logo">BUSINESS SUNSET</div>
+    <div class="client-logo">ADMIN. KILAMBA KIAXI</div>
+    <div class="client-logo">FRIBURGE ENERGIES</div>
+    <div class="client-logo">AVOVA</div>
+    <div class="client-logo">PRODEL - EP</div>
+  </div>
+</section>
+
+<!-- TESTEMUNHOS -->
+<section style="background:var(--white);">
+  <div class="reveal" style="text-align:center;max-width:500px;margin:0 auto 0;">
+    <div class="section-label" style="justify-content:center;">Depoimentos</div>
+    <h2 class="section-title">O Que Dizem <span>os Clientes</span></h2>
+  </div>
+  <div class="testimonials-grid stagger">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">A CGD superou todas as nossas expectativas. A qualidade dos fardamentos e a atenção ao detalhe no design foram excepcionais.</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">AK</div><div><div class="testimonial-name">Administração Kilamba Kiaxi</div><div class="testimonial-role">Governo Provincial de Luanda</div></div></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">Excelente serviço! Os brindes personalizados para o nosso evento de networking foram um sucesso. Design moderno e qualidade de topo.</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">BS</div><div><div class="testimonial-name">Business Sunset</div><div class="testimonial-role">Clube de Negócios</div></div></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">A qualidade de impressão foi perfeita. A equipa CGD é profissional, rápida e sempre disponível. Um parceiro de confiança.</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">PS</div><div><div class="testimonial-name">Empresa Portuária do Soyo</div><div class="testimonial-role">Empresa Pública</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band reveal">
+  <div class="cta-band-title">Pronto para Dar Vida<br>à Sua Marca?</div>
+  <a href="contacto.html" class="btn-white">Pedir Orçamento Gratuito</a>
+</div>
+
+
+<!-- ====================================================== -->
+<!--                       FOOTER                          -->
+<!-- ====================================================== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <svg viewBox="0 0 200 65" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="58" height="58" rx="3" fill="#1B3A3A"/>
+        <polygon points="0,58 58,0 58,58" fill="#E85C1B"/>
+        <polygon points="12,44 44,12 12,12" fill="#1B3A3A"/>
+        <text x="68" y="44" font-family="Arial Black,sans-serif" font-size="32" font-weight="900" fill="#E85C1B">CGD</text>
+        <text x="120" y="54" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,.4)">LDA</text>
+      </svg>
+      <p class="footer-tagline">Criatividade que Imprime Resultados. Especialistas em design gráfico, impressão e branding em Angola.</p>
+      <div class="footer-socials">
+        <a class="footer-social" href="https://facebook.com" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a class="footer-social" href="https://instagram.com" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a class="footer-social" href="https://linkedin.com" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Navegação</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Serviços</div>
+      <ul class="footer-links">
+        <li><a href="servicos.html">Design Gráfico</a></li>
+        <li><a href="servicos.html">Impressão Digital</a></li>
+        <li><a href="servicos.html">Branding Corporativo</a></li>
+        <li><a href="servicos.html">Brindes Personalizados</a></li>
+        <li><a href="servicos.html">Fardamentos</a></li>
+        <li><a href="servicos.html">Sinalética</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Receba Novidades</div>
+      <p style="font-size:.85rem;color:rgba(255,255,255,.45);margin-bottom:16px;line-height:1.6;">Subscreva para receber promoções e novidades CGD.</p>
+      <div class="footer-newsletter">
+        <input type="email" placeholder="O seu email">
+        <button class="btn-primary" style="width:100%;padding:12px;" onclick="showToast('Subscrito com sucesso! ✓')">Subscrever</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 <span>CGD LDA</span>. Todos os direitos reservados. Feito em <span>Angola</span> 🇦🇴</p>
+    <p class="footer-copy">Luanda, Angola</p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✓</span>
+  <span id="toastMsg">Mensagem enviada!</span>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a class="wa-float" href="https://wa.me/244900000000" target="_blank" title="WhatsApp CGD">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
